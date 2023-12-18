@@ -1,0 +1,318 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    font-family: Raleway, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    background-image: url('https://i.pinimg.com/originals/24/3c/1d/243c1d709182329320633deb19f207b3.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+body {
+    background-image: url('https://i.pinimg.com/originals/24/3c/1d/243c1d709182329320633deb19f207b3.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.wrapper .container {
+    width: 1024px;
+    border-radius: 8px;
+    margin: 16px;
+    background: #F8F9FA;
+    padding: 16px;
+    flex-grow: 1;
+    height: fit-content;
+}
+
+
+.item {
+    border-radius: 16px;
+    margin-top: 16px;
+    padding: 12px 24px 12px 24px;
+    background: white;
+    display: flex;
+    align-items: center;
+}
+
+.item > .inner h2 {
+    margin-bottom: unset;
+}
+
+.item > .inner p {
+    margin-top: 5px;
+}
+
+.form {
+    display: flex;
+    padding: 16px;
+    flex-direction: column;
+    height: 300px;
+    border-radius: 16px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    margin-bottom: 4px;
+    font-size: 18px;
+    font-weight: lighter;
+}
+
+.shadow {
+    box-shadow: 0 5px 10px rgba(154, 160, 185, .05), 0 15px 40px rgba(166, 173, 201, .2);
+}
+
+input[type=text], input[type=date] {
+    font-family: Raleway, sans-serif;
+    background: #F5F1FF;
+    border: 2px solid #9475EA;
+    border-radius: 8px;
+    padding: 16px;
+    box-sizing: border-box;
+    margin-bottom: 8px;
+    font-size: 24px;
+}
+
+.btn-submit {
+    width: fit-content;
+    font-family: Raleway, sans-serif;
+    border-radius: 16px;
+    padding: 12px 24px;
+    border: 2px solid #5F30E2;
+    color: black;
+    font-size: 24px;
+    margin-top: auto;
+    align-self: flex-end;
+    cursor: pointer;
+}
+
+.btn-submit:hover {
+    background: #5F30E2;
+    color: white;
+}
+
+input[type=text], input[type=date], .btn-submit:focus {
+    outline: none;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.form-title {
+    margin: auto 0;
+}
+
+@media only screen and (max-width: 1024px) {
+    .wrapper {
+        margin: 0;
+    }
+
+    .wrapper .container {
+        width: 100%;
+    }
+
+    .list-item {
+        width: 90%;
+    }
+
+    .form {
+        width: 100%;
+    }
+}
+
+.dark-theme {
+    background-color: #1e1e1e; 
+    color: #ffffff; 
+}
+
+.dark-theme header {
+    background: #2b2b2b; 
+    color: #f0ebeb; 
+}
+
+.dark-theme .container {
+    background: #333; 
+    color: #ffffff; 
+}
+
+.dark-theme .container-header {
+    color: #f8f4f4; 
+    font-size: 25px;
+}
+
+.dark-theme .list-item {
+    color: #f1eded; 
+    font-size: 10px;
+    font-style: italic;
+}
+
+
+.btn-submit {
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn-submit:hover {
+    background: #5F30E2;
+    color: white;
+}
+
+  header img {
+    width: 100px; 
+    height: auto; 
+    margin-left: 20px; 
+  }
+
+  header h1 {
+    font-weight: bold; 
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  .form {
+    display: flex;
+    flex-direction: column;
+    align-items: left; /* Menengahkan item dalam flexbox */
+    height: auto; /* Mengubah ketinggian sesuai konten */
+    margin-top: 20px; /* Jarak dari elemen di atasnya */
+}
+
+.form input[type="submit"] {
+    margin-top: 10px; /* Menambahkan jarak antara input dan tombol submit */
+}
+
+
+.finished-status {
+    color: green; /* Warna untuk buku yang telah selesai dibaca */
+    font-style: italic; /* Gaya huruf italic */
+}
+
+.unfinished-status {
+    color: red; /* Warna untuk buku yang belum selesai dibaca */
+    font-weight: bold; /* Gaya huruf bold */
+}
+
+.form-group {
+    display: flex;
+    align-items: left;
+}
+
+input[type="text"] {
+    flex: 1;
+}
+
+.search-button {
+    padding: 8px 16px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.checkbox-wrapper {
+    display: flex;
+    align-items: center;
+}
+
+.checkbox-wrapper input[type="checkbox"] {
+    margin-right: 8px; /* Menambahkan jarak antara checkbox dan teks */
+}
+
+.container {
+    width: 100%;
+    max-width: 800px; /* Mengatur lebar maksimum container */
+    margin: 20px auto; /* Memberi jarak di atas dan bawah, serta mengatur posisi menjadi tengah */
+    padding: 20px;
+    border-radius: 10px;
+    background: #141414;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Menyesuaikan judul header container */
+.container-header {
+    margin-bottom: 20px; /* Memberi jarak antara judul dengan konten */
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Menyesuaikan ukuran dan jarak pada input, label, dan tombol */
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+}
+
+input[type="text"],
+input[type="number"] {
+    width: calc(100% - 10px); /* Menyesuaikan lebar input */
+    padding: 10px;
+    border: 1px solid #110000;
+    border-radius: 5px;
+    font-size: 16px;
+    color: #555;
+}
+
+.checkbox-wrapper {
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    color: #f5ecec;
+}
+
+.checkbox-wrapper input[type="checkbox"] {
+    margin-right: 8px;
+}
+
+/* Menyesuaikan tombol cari */
+.search-button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: rgb(17, 16, 16);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.search-button:hover {
+    background-color: #45a049;
+}
+
+.form-group label {
+    color: #e6e2e2; /* Ubah warna teks label */
+}
+
+input[type="text"],
+input[type="number"] {
+    /* Pastikan warna teks input cukup kontras */
+    color: #161515;
+}
+
+

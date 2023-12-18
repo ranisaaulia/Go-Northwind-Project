@@ -36,6 +36,8 @@ func GetAllMovie(c *gin.Context) {
 // @Description Creating a new Movie.
 // @Tags Movie
 // @Param Body body movieInput true "the body to create a new movie"
+// @Param Authorization header string true "Authorization. How to input in swagger : 'Bearer <insert_your_token_here>'"
+// @Security BearerToken
 // @Produce json
 // @Success 200 {object} models.Movie
 // @Router /movies [post]
@@ -89,6 +91,8 @@ func GetMovieById(c *gin.Context) { // Get model if exist
 // @Produce json
 // @Param id path string true "movie id"
 // @Param Body body movieInput true "the body to update an movie"
+// @Param Authorization header string true "Authorization. How to input in swagger : 'Bearer <insert_your_token_here>'"
+// @Security BearerToken
 // @Success 200 {object} models.Movie
 // @Router /movies/{id} [patch]
 func UpdateMovie(c *gin.Context) {
@@ -131,6 +135,8 @@ func UpdateMovie(c *gin.Context) {
 // @Tags Movie
 // @Produce json
 // @Param id path string true "movie id"
+// @Param Authorization header string true "Authorization. How to input in swagger : 'Bearer <insert_your_token_here>'"
+// @Security BearerToken
 // @Success 200 {object} map[string]boolean
 // @Router /movie/{id} [delete]
 func DeleteMovie(c *gin.Context) {
